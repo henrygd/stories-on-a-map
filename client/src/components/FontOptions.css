@@ -1,0 +1,44 @@
+.fonts {
+	columns: 8em 4;
+	column-gap: 0;
+	background: #eae8e8;
+}
+
+.font-modal button {
+	color: #383737;
+	border: 0;
+	font-size: 1.1em;
+	padding: 1.2em 0;
+	width: 100%;
+	cursor: pointer;
+	background: transparent;
+}
+
+.fonts > button:hover {
+	background: #ddd;
+}
+
+.font-size {
+	border-top: 1px solid #bbb;
+	background: #ccc;
+}
+
+.font-size > button {
+	width: 25%;
+	padding: 1.2em 0;
+	font-size: .9em;
+}
+.font-size > button:hover {
+	background: #bfbfbf;
+}
+
+.font-size > button.plus i {
+	transform: scale(1.5);
+}
+
+@media (max-width: 500px) {
+	.font-size > button {
+		width: 50%;
+		padding: 1em 0;
+	}
+}

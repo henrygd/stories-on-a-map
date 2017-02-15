@@ -1,0 +1,238 @@
+.navbar-container {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	/*background-color: #673ab7;*/
+	/*background-color: rgba(59, 71, 83, 0.98);*/
+	color: #fff;
+	/*color: #faffef;*/
+	text-align: center;
+	z-index: 9;
+	transition: transform .4s ease;
+}
+
+.hide-nav {
+	transform: translateY(-3.3em);
+}
+
+.navbar-links {
+	flex-grow: 1;
+	text-align: right;
+}
+.navbar-links a {
+	padding: 1.1em 1.2em .95em;
+	display: inline-block;
+}
+
+.flex-links {
+	display: flex;
+	flex-grow: 1;
+	flex-wrap: wrap;
+}
+
+.flex-links a {
+	flex-grow: 1;
+}
+
+.navbar {
+	display: flex;
+	height: 3.2em;
+	overflow: hidden;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+	margin-right: 3.2em;
+	background-color: rgba(59, 71, 83, 0.98);
+}
+
+.submenu {
+	position: absolute;
+	right: 0;
+	width: 30em;
+	max-width: 100%;
+	/*background-color: #5830a0;*/
+	background-color: rgba(51, 63, 75, 0.98);
+	box-shadow: -2px 1px 4px rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+
+.submenu a {
+	white-space: pre;
+	padding: 1.1em 1.2em;
+}
+
+.submenu a:hover {
+	background-color: #3e4a56!important;
+}
+
+.submenu-link {
+	cursor: pointer;
+	padding: .85em 1em 0;
+}
+
+.navbar-container .fa {
+	margin-right: .4em;
+	font-size: .9em;
+	color: #ebe5c9;
+}
+
+.navbar .fa-bars {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+.navbar-title {
+	padding: 0 4% 0 4%!important;
+	text-align: center;
+}
+
+.navbar h1 {
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin: .55em auto 0;
+}
+
+.navbar-container a {
+	text-decoration: none;
+	color: inherit;
+	white-space: pre;
+	outline: none;
+}
+
+.navbar-container a.active {
+	/*background-color: #7548c5;*/
+	background-color: #445260;
+	border-bottom: .15em solid #c4bfaa;
+	padding: 1.1em 1.2em .85em;
+}
+
+.story-search {
+	display: flex;
+	align-items: center;
+	margin: 0 1em 0 .5em;
+	position: relative;
+}
+
+/* search input icon */
+.story-search .fa {
+	position: absolute;
+	top: .9rem;
+	left: 0;
+	font-size: .85em;
+	color: #777;
+	padding: .5em 0 .5em .4em;
+}
+.story-search .fa-close {
+  font-size: 1em;
+  padding: .35em .2em .3em .35em;
+  top: .8em;
+  opacity: .9;
+}
+
+.story-search .fa-close {
+	cursor: pointer;
+}
+
+.navbar input {
+	background-color: #f1f1f1;
+	color: #444;
+	border-radius: 3px;
+	padding: .3em .3em .3em 1.6em;
+	border: 0;
+	outline: 0;
+	margin-left: 1em;
+	font-size: .9em;
+	margin: auto;
+	width: 11em;
+}
+
+.navbar .icon-cross {
+	height: 3.2em;
+	width: 3.2em;
+	border-left: 1px solid #666971;
+	background-color: #3e4753;
+	opacity: 1!important;
+	box-shadow: 3px 0px 7px rgba(0, 0, 0, 0.3);
+	transition: transform .4s ease;
+}
+.navbar .icon-cross:hover::before {
+	opacity: .9;
+}
+
+.hide-nav .icon-cross {
+	position: absolute;
+	border: 0;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+	transform: translateY(3.3em);
+}
+.navbar .icon-cross::before {
+	transition: transform .4s;
+	opacity: .7;
+}
+.hide-nav .icon-cross::before {
+	transform: rotate(180deg);
+	background-image: url(data:image/svg+xml;charset=UTF8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20344.3%20344.3%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M0%2046h344.3v29.6H0zM0%20156.5h344.3V186H0zM0%20268.7h344.3v29.5H0z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.navbar-container a:hover {
+	background-color: #445260;
+}
+
+.search-panel {
+  position: fixed;
+  right: 0;
+  top: 3.2em;
+  width: 30em;
+  max-width: 90%;
+  background-color: #eee;
+  overflow: auto;
+  color: #333;
+  box-shadow: 0px .2em .5em rgba(0, 0, 0, 0.4);
+  max-height: calc(100vh - 3.2em);
+}
+
+.story-listing {
+	font-size: 1.2em;
+	padding: .5em 1.5em;
+	border-bottom: 1px solid #ee4a86!important;
+	cursor: pointer;
+	display: block;
+}
+
+.story-listing:last-child {
+	border-bottom: 0!important;
+}
+
+.story-listing:hover, .story-listing:focus {
+  background-color: #445260;
+  color: #fff;
+}
+
+.story-listing h3 {
+	font-family: Roboto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@media all and (max-width: 660px) {
+	.story-search {
+		display: none;
+	}
+	.navbar-title {
+		/*max-width: 75%;*/
+		overflow: hidden;
+	}
+}
+
+@media all and (max-width: 380px) {
+
+	.submenu-link {
+	    cursor: pointer;
+	    padding: .85em 1em 0 .5em;
+	}
+	.navbar h1 {
+		/*text-transform: none;*/
+    font-size: 1.3em;
+    padding-top: .2rem;
+	}
+}

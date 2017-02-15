@@ -1,0 +1,214 @@
+.modal {
+	position: relative;
+	margin: auto;
+	/*opacity: 0;*/
+	width: 46em;
+	max-width: 96%;
+	height: auto;
+	/*max-height: 90vh;*/
+	background-color: #dfdfdf;
+	/*border-radius: 2px;*/
+	box-shadow: 0px 0px .6em rgba(0, 0, 0, 0.3);
+/*	overflow: hidden;
+	overflow-y: auto;*/
+	/*transition: opacity .2s ease-in-out;*/
+}
+
+.modal-container {
+	position: fixed;
+	top: -30px;
+	bottom: -30px;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	z-index: 9;
+	/*transition: opacity .2s ease-in-out;*/
+}
+
+.icon-cross {
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	width: 3.5em;
+	height: 3.5em;
+	outline: none;
+	border: none;
+	background: none;
+	/*padding: 10px;*/
+	opacity: .35;
+	cursor: pointer;
+	/*transition: transform .3s, opacity .3s;*/
+}
+.icon-cross::before {
+	content: '';
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjQuNTEyIDIyNC41MTIiPjxwYXRoIGQ9Ik0yMjQuNSA3bC03LTctMTA1LjIgMTA1LjNMNyAwIDAgN2wxMDUuMyAxMDUuM0wwIDIxNy41bDcgNyAxMDUuMy0xMDUuMyAxMDUuMiAxMDUuMyA3LTctMTA1LjMtMTA1LjIiIGZpbGw9IiNmZmYiLz48L3N2Zz4=");
+	background-size: 50%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.icon-cross:hover {
+/*  -webkit-transform: scale(1.05);
+	transform: scale(1.05);*/
+	opacity: .6;
+}
+
+.modal-inner {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	max-height: calc(97vh - 3.5em);
+	overflow: auto;
+}
+.modal-inner > {
+	width: 100%;
+}
+.modal-inner a {
+	color: #1B56B0;
+	text-decoration: none;
+}
+.modal-inner a:hover {
+	text-decoration: underline;
+}
+.modal-inner form {
+	display: flex;
+	flex-wrap: wrap;
+}
+.modal-inner input, .modal-inner label, .modal-inner textarea {
+	flex-grow: 1;
+	flex-basis: 100%;
+	padding: 1em;
+	outline: none;
+	border: 0;
+	border-top: 1px solid #DEDEDE;
+	color: #333;
+	border-radius: 0px;
+	box-shadow: none;
+	/*transition: background-color .25s;*/
+}
+.modal-inner input[type=text], .modal-inner input[type=email], .modal-inner input[type=password], .modal-inner textarea {
+	background-color: #f7f7f7;
+}
+.modal-inner input[type=text]:focus, .modal-inner input[type=email]:focus, .modal-inner input[type=password]:focus, .modal-inner textarea:focus {
+	background-color: #FFF7E4;
+}
+.modal-inner textarea {
+	height: 40vh;
+}
+.modal-inner label {
+	text-align: center;
+	font-size: .9em;
+	padding: .9em;
+}
+
+.modal-head {
+	position: relative;
+	/*height: 3.5em;*/
+	background-color: #37424e;
+	color: #faffef;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.modal-head h2 {
+	margin: 0;
+	font-size: 2em;
+	padding: 0.3em 1.5em .3em .5em;
+	white-space: pre;
+	/*cursor: move;*/
+	user-select: none;
+}
+.modal-head h2 .fa {
+	color: #ebe5c9;
+	margin-right: .3em;
+}
+
+.pu-info {
+	text-align: center;
+	padding: 1.1em;
+}
+
+.pu-body {
+	text-align: center;
+	padding: 1.5em;
+	line-height: 1.4;
+}
+
+.pu-error {
+	background-color: #DA5454;
+	color: #fff;
+	font-weight: 800;
+}
+.pu-error li {
+	text-align: left;
+	padding: .2em 0;
+}
+
+.btn-purp {
+	background-color: #5C73DE;
+	cursor: pointer;
+	/*border-color: #5369D2 !important;*/
+	color: #fff!important;
+	font-family: inherit;
+}
+.btn-purp:hover {
+	background-color: #617AF0;
+}
+.btn-purp:focus {
+	background-color: #5469D0;
+}
+
+
+/*ALERTS*/
+.alert-danger, .alert-notice, .alert-success {
+	color: #fff;
+	font-weight: bold;
+	padding: 1em;
+	text-align: center;
+}
+.alert-danger ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+.alert-danger {
+	background-color: #EC5555;
+}
+.alert-notice {
+	background-color: #C5953D;
+}
+.alert-success {
+	background-color: #42B546;
+	padding: 1em 10%;
+	font-size: 1.1em;
+}
+
+.modal .story-listing {
+	position: relative;
+	font-size: 1.3em;
+	padding-left: 36%;
+	text-align: left;
+}
+
+.modal .story-listing:nth-child(2) {
+  margin-top: -1.7em;
+}
+
+.picture-box {
+  width: 33%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: .9;
+  mask-image: linear-gradient(to left, transparent, #000 95%);
+}

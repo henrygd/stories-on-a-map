@@ -1,0 +1,10 @@
+.not-found {
+	padding: 0 1em;
+	text-align: center;
+}
+
+.not-found h1 {
+  font-size: 8em;
+  font-family: Roboto;
+  margin: 26vh 0 .1em 0;
+}

@@ -1,0 +1,60 @@
+.map-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#new_story_map {
+	background: #eee;
+	height: 65vh;
+}
+
+#new_story_map::before {
+  content: 'Drag marker to story location';
+  position: absolute;
+  left: -10em;
+  top: -10em;
+  bottom: -10em;
+  right: -10em;
+  padding: 11em;
+  text-align: center;
+  color: #fff;
+  font-size: 2.2em;
+  background: rgba(29, 29, 29, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: Roboto;
+  text-shadow: 0px 1px .3em rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: opacity 1s, transform 1s ease-in;
+}
+
+#new_story_map.fade-msg::before {
+	opacity: 0;
+	transform: scale(.8);
+}
+
+#new_story_map.hide-msg::before {
+	display: none;
+}
+
+/* google map infowindow style */
+.gm-style-iw {
+	color: #444;
+	padding: .4em;
+	font-size: 1.5em!important;
+}
+.gm-style-iw h3 {
+	margin: .1em 0 .4em;
+}
+.gm-style-iw + div {
+	display: none;
+}
+.gm-style-iw div {
+	overflow: hidden!important;
+}
